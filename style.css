@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
+:root {
+  --primary-color: #3d405b;
+  --white: white;
+  --secondary-color: #1e202d;
+}
 
 body {
   display: grid;
   place-items: center;
   height: 100vh;
-  background-color: #3d405b;
+  background-color: var(--primary-color);
   margin: 0rem;
   overflow: hidden;
 }
@@ -13,21 +18,22 @@ body {
 h1 {
   font-family: 'Space Mono', monospace;
   font-size: clamp(3rem, 10vw, 10rem);
-  color: white;
+  color: var(--white);
   padding: 0rem clamp(1rem, 2vw, 3rem);
   border-radius: clamp(0.4rem, 0.75vw, 1rem);
 }
 
 h1:hover {
-  background-color: white;
-  color: #3d405b;
+  background-color: var(--white);
+  color: var(--primary-color);
 }
 
 /* -- YouTube Link Styles -- */
 
 body.menu-toggled > .meta-link > span {
-  color: #3d405b;
+  color: var(--primary-color);
 }
+
 .no-select {
   -webkit-touch-callout: none;
   /* iOS Safari */
@@ -53,11 +59,11 @@ body.menu-toggled > .meta-link > span {
 }
 
 ion-icon {
-  color: white;
+  color: var(--white);
 }
 
 #projects-link > i {
-  color: white;
+  color: var(--white);
 }
 
 .meta-link {
@@ -84,13 +90,53 @@ ion-icon {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.meta-link > i, .meta-link > span {
+.meta-link > i, .meta-link > span > button{
   height: 20px;
   line-height: 20px;
 }
 
 .meta-link > span {
-  color: white;
+  color: var(--white);
   font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
+
+
+
+/* DARKMODE */
+.dark-mode {
+  --primary-color: #1e202d;
+  --white: #f4f1de;
+}
+#dark-mode-button {
+  bottom: 110px;
+}
+
+#dark-mode-a {
+  align-items: center;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  bottom: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: inline-flex;
+  gap: 5px;
+  left: 10px;
+  padding: 10px 20px;
+  position: fixed;
+  text-decoration: none;
+  transition: background-color 400ms, border-color 400ms;
+  z-index: 10000;
+  bottom: 110px;
+  color: var(--white);
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+#dark-mode-a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* DARKMODE END */

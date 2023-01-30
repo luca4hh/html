@@ -26,3 +26,9 @@ document.querySelector("h1").onmouseover = event => {
     iteration += 1 / 3;
   }, 30);
 }
+
+const dark_mode_button = document.getElementById("dark-mode-a")
+
+dark_mode_button.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode")
+})
