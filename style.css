@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
 :root {
-  --primary-color: #3d405b;
-  --white: white;
-  --secondary-color: #1e202d;
+  --primary-color: white;
+  --secondary-color: #3d405b;
+
 }
 
 body {
   display: grid;
   place-items: center;
   height: 100vh;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   margin: 0rem;
   overflow: hidden;
 }
@@ -19,20 +19,20 @@ body {
 h1 {
   font-family: 'Space Mono', monospace;
   font-size: clamp(3rem, 10vw, 10rem);
-  color: var(--white);
+  color: var(--primary-color);
   padding: 0rem clamp(1rem, 2vw, 3rem);
   border-radius: clamp(0.4rem, 0.75vw, 1rem);
 }
 
 h1:hover {
-  background-color: var(--white);
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 /* -- YouTube Link Styles -- */
 
 body.menu-toggled > .meta-link > span {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .no-select {
@@ -60,11 +60,11 @@ body.menu-toggled > .meta-link > span {
 }
 
 ion-icon {
-  color: var(--white);
+  color: var(--primary-color);
 }
 
 #projects-link > i {
-  color: var(--white);
+  color: var(--primary-color);
 }
 
 .meta-link {
@@ -97,7 +97,7 @@ ion-icon {
 }
 
 .meta-link > span {
-  color: var(--white);
+  color: var(--primary-color);
   font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
@@ -106,8 +106,8 @@ ion-icon {
 
 /* DARKMODE */
 .dark-mode {
-  --primary-color: #1e202d;
-  --white: #f4f1de;
+  --primary-color: #f4f1de;
+  --secondary-color: #1e202d;
 }
 #dark-mode-button {
   bottom: 110px;
@@ -131,7 +131,7 @@ ion-icon {
   transition: background-color 400ms, border-color 400ms;
   z-index: 10000;
   bottom: 110px;
-  color: var(--white);
+  color: var(--primary-color);
   font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
