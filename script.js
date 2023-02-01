@@ -1,3 +1,4 @@
+/* TITLE TEXT ANIMATION */
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 let interval = null;
@@ -27,8 +28,58 @@ document.querySelector("h1").onmouseover = event => {
   }, 30);
 }
 
-const dark_mode_button = document.getElementById("dark-mode-a")
+/* TITLE TEXT ANIMATION END */
 
-dark_mode_button.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode")
-})
+/* DARKMODE */
+
+const darkModeBtn = document.querySelector('.theme-switch');
+const darkModeBody = document.querySelector('body');
+
+const darkMode = () => {
+    darkModeBody.classList.toggle('dark')
+}
+
+darkModeBtn.addEventListener('click', () => {
+    setDarkMode = localStorage.getItem('dark');
+
+    if(setDarkMode !== "on") {
+        darkMode();
+        setDarkMode = localStorage.setItem('dark', 'on');
+    } else {
+        darkMode();
+        setDarkMode = localStorage.setItem('dark', null);
+    }
+});
+
+let setDarkMode = localStorage.getItem('dark');
+
+if(setDarkMode === 'on') {
+    darkMode();
+}
+
+/* DARKMODE END */
+
+/* GALLERY */
+
+const images = document.querySelectorAll(".galerie img");
+
+document.addEventListener("mousemove", ($event) => {
+	const { clientX } = $event;
+	const percent = calcPercent(clientX);
+	images.forEach((image) => moveImageBackground(image, percent));
+});
+
+function calcPercent(clientX) {
+	return (clientX / window.innerWidth) * 100;
+}
+
+function moveImageBackground(image, percent) {
+	image.animate(
+		{
+			objectPosition: `${percent}% 0%`
+		},
+		{ fill: "forwards", duration: 250, easing: "ease-in" }
+	);
+}
+
+/* GALLERY END */

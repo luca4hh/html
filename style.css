@@ -7,6 +7,11 @@
 
 }
 
+.dark {
+  --primary-color: #f4f1de;
+  --secondary-color: #1e202d;
+}
+
 body {
   display: grid;
   place-items: center;
@@ -14,6 +19,7 @@ body {
   background-color: var(--secondary-color);
   margin: 0rem;
   overflow: hidden;
+  transition: 0.5s ease-in-out;
 }
 
 h1 {
@@ -40,16 +46,20 @@ body.menu-toggled > .meta-link > span {
 
 }
 
+i {
+  color: var(--primary-color);
+}
+
 #source-link {
   bottom: 60px;
 }
 
-#github-link {
-  bottom: 60px;
+#source-link>i {
+  color: var(--primary-color);
 }
 
-ion-icon {
-  color: var(--primary-color);
+#github-link {
+  bottom: 60px;
 }
 
 #projects-link > i {
@@ -91,18 +101,37 @@ ion-icon {
   font-weight: 500;
 }
 
+.galerie {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5rem;
+}
+
+.img-gallery {
+  border-radius: 1.5rem;
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 17rem;
+  height: 25rem;
+  vertical-align: bottom;
+  transition: scale 250ms ease-in-out;
+}
+
+.img-gallery:hover {
+  scale: 1.1;
+
+}
 
 
 /* DARKMODE */
-.dark-mode {
-  --primary-color: #f4f1de;
-  --secondary-color: #1e202d;
-}
-#dark-mode-button {
-  bottom: 110px;
-}
 
-#dark-mode-a {
+.theme-switch {
   align-items: center;
   backdrop-filter: blur(3px);
   background-color: rgba(255, 255, 255, 0.05);
@@ -126,7 +155,7 @@ ion-icon {
   font-size: 16;
 }
 
-#dark-mode-a:hover {
+.theme-switch:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
