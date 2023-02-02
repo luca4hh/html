@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="de" >
-<head>
-  <meta charset="UTF-8">
-  <title>Luca</title>
-  <link rel="stylesheet" href="./style.css" defer>
-
-</head>
-<body class="dark">
-  <div>
-    <h1 data-value="LUCA" class="no-select">LUCA</h1>
-
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Luca</title>
+    <link rel="stylesheet" href="./style.css" defer />
+  </head>
+  <body class="dark">
+    <h1 data-value="LUCA" id="hacked-effect" class="no-select">LUCA</h1>
     <i class="fa-solid fa-moon theme-switch"></i>
-    
-    <a id="source-link" class="meta-link" href="https://github.com/lucarichardsen" target="_blank">
+
+    <a
+      id="source-link"
+      class="meta-link"
+      href="https://github.com/lucarichardsen"
+      target="_blank"
+    >
       <i class="fa-brands fa-github"></i>
       <span>Github</span>
     </a>
@@ -21,10 +23,15 @@
       <i class="fa-solid fa-folder"></i>
       <span>Projects</span>
     </a>
-  </div>
 
-
-  <script src="https://kit.fontawesome.com/6fa4077276.js" crossorigin="anonymous"></script>
-  <script src="/script.js"></script>
-</body>
+    <script
+      src="https://kit.fontawesome.com/6fa4077276.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/script.js"></script>
+    <script>
+      initPage();
+      HackedText();
+    </script>
+  </body>
 </html>
